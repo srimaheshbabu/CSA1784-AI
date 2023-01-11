@@ -1,0 +1,54 @@
+rows = int(input('ENter number of rows: '))
+cols  = int(input('ENter number of column: '))
+print() 
+print('Enter values for matrix A')
+matrix_A = [[int(input(f"column {j+1} -> ENter {i+1} element:")) for j in range(cols)] for i in range(rows) ]  
+print()
+print('Enter values for matrix B ')
+matrix_B = [[int(input(f"column {j+1} -> ENter {i+1} element:")) for j in range(cols)] for i in range(rows) ]  
+print() 
+print('Matrix-A :')
+for i in matrix_A:
+    print(i)
+print()
+print('Matrix-B :')
+for i in matrix_B:
+    print(i)
+result = [[0 for j in range(cols)] for i in range(rows)]
+for i in range(rows):
+    for j in range(cols):
+        result[i][j] = matrix_A[i][j] + matrix_B[i][j]
+print() 
+print('Addition of Matrix-A and Matrix-B is :')
+for i in result:
+    print(i)
+    
+    
+    
+    OUT PUT:
+Enter number of rows: 2
+Enter number of column: 2
+
+Enter values for matrix A
+column 1 -> ENter 1 element:2
+column 2 -> ENter 1 element:5
+column 1 -> ENter 2 element:4
+column 2 -> ENter 2 element:7
+
+Enter values for matrix B 
+column 1 -> ENter 1 element:6
+column 2 -> ENter 1 element:8
+column 1 -> ENter 2 element:1
+column 2 -> ENter 2 element:3
+
+Matrix-A :
+[2, 5]
+[4, 7]
+
+Matrix-B :
+[6, 8]
+[1, 3]
+
+Addition of Matrix-A and Matrix-B is :
+[8, 13]
+[5, 10]
