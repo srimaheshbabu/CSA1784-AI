@@ -1,0 +1,40 @@
+bird(sparrow).
+bird(eagle).
+bird(duck).
+bird(crow).
+~bird(ostrich).
+bird(puffin).
+bird(swan).
+bird(albatross).
+bird(starling).
+bird(owl).
+bird(kingfisher).
+bird(thrush).
+can_fly(X):-bird(X).
+can_fly(ostrich):-fail.
+
+
+OUTPUT:-
+% c:/Users/admin/Documents/Prolog/birdcanflyornot.pl compiled 0.02 sec, 13 clauses
+?- ;
+|    bird(X).
+ERROR: Syntax error: Operator expected
+ERROR: ;
+ERROR: ** here **
+ERROR: 
+bird(X) . 
+?- 
+|    bird(X).
+X = sparrow ;
+X = eagle ;
+X = duck ;
+X = crow ;
+X = puffin ;
+X = swan ;
+X = albatross ;
+X = starling ;
+X = owl ;
+X = kingfisher ;
+X = thrush.
+
+?- 
